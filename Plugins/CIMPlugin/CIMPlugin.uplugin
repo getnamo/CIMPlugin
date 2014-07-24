@@ -1,0 +1,20 @@
+{
+    "FileVersion" : 3,
+	
+	"FriendlyName" : "Custom Input Mapping Plugin",
+	"Version" : 1,
+	"VersionName" : "1.0",
+	"CreatedBy" : "Getnamo",
+	"CreatedByURL" : "http://syntheticinsights.com",
+	"EngineVersion" : 1579795,
+	"Description" : "Supports forwarding any blueprint values into custom input mapping axes and key events.",
+	"Category" : "Input.Controller",
+	
+    "Modules" :
+	[
+		{
+			"Name" : "CIMPlugin",
+			"Type" : "Runtime"
+		}
+	]
+}
