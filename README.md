@@ -29,7 +29,7 @@ A simple plugin exposing 12 axes and 12 buttons for custom input mapping.
  1.	For a good example start with a template project.
  3.	Select Edit->Project Settings.
  4.	Select Engine->Input
- 5.	Under Action Mappings and Axis Mappings expand the category you wish to add custom input. For example if you want to add Forward motion in the standard 3rd person template, click the + sign in MoveForward.
+ 5.	Under Action Mappings and Axis Mappings expand the category you wish to add custom input to. For example if you want to add Forward motion in the standard 3rd person template, click the + sign in MoveForward.
  6.	Change None to the binding you want and adjust the scale to fit. The CIM events should be near the bottom.
  7.	Play and test your scaling adjust as needed.
 
