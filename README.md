@@ -6,7 +6,7 @@ A simple plugin exposing 12 axes and 12 buttons for custom input mapping.
 ## Quick Setup ##
 1. Create new or open a project. 
 2. Browse to your project (typically found at *Documents/Unreal Project/{Your Project Root}*)
-3. Copy *Plugins* folder into your Project root.
+3. Copy the plugin folder into your *{Project root}/Plugins* folder, create if missing.
 5. Reopen your project again.
 6. Select Window->Plugins. Click on Installed and you should see a category called Input and a plugin called Custom Input Mapping Plugin now available and enabled. (If it isn't automatically enabled, select Enabled. The editor will warn you to restart, click restart.)
 7. The plugin should be enabled and ready to use. 
