@@ -2,7 +2,7 @@
 
 #include "ICIMPlugin.h"
 #include "FCIMPlugin.h"
-#include "Slate.h"
+#include "SlateBasics.h"
 
 IMPLEMENT_MODULE(FCIMPlugin, CIMPlugin)
 
@@ -70,6 +70,25 @@ void FCIMPlugin::StartupModule()
 	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxisPitch, LOCTEXT("CustomAxisPitch", "Custom Axis Pitch"), FKeyDetails::FloatAxis));
 	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxisYaw, LOCTEXT("CustomAxisYaw", "Custom Axis Yaw"), FKeyDetails::FloatAxis));
 	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxisRoll, LOCTEXT("CustomAxisRoll", "Custom Axis Roll"), FKeyDetails::FloatAxis));
+}
+
+//UE v4.6 IM event wrappers
+bool EmitKeyUpEventForKey(FKey key, int32 user, bool repeat)
+{
+	FKeyEvent KeyEvent(key, FSlateApplication::Get().GetModifierKeys(), user, repeat, 0, 0);
+	return FSlateApplication::Get().ProcessKeyUpEvent(KeyEvent);
+}
+
+bool EmitKeyDownEventForKey(FKey key, int32 user, bool repeat)
+{
+	FKeyEvent KeyEvent(key, FSlateApplication::Get().GetModifierKeys(), user, repeat, 0, 0);
+	return FSlateApplication::Get().ProcessKeyDownEvent(KeyEvent);
+}
+
+bool EmitAnalogInputEventForKey(FKey key, float value, int32 user, bool repeat)
+{
+	FAnalogInputEvent AnalogInputEvent(key, FSlateApplication::Get().GetModifierKeys(), user, repeat, 0, 0, value);
+	return FSlateApplication::Get().ProcessAnalogInputEvent(AnalogInputEvent);
 }
 
 #undef LOCTEXT_NAMESPACE
@@ -172,19 +191,26 @@ FKey GetFKeyForAxisID(int axis)
 void FCIMPlugin::PressButton(int button)
 {
 	FKey key = GetFKeyForButtonID(button);
+
 	if (key != EKeysCIM::Unknown)
-		FSlateApplication::Get().OnControllerButtonPressed(key, 0, 0);
+	{
+		EmitKeyDownEventForKey(key, 0, 0);
+	}
 }
 void FCIMPlugin::ReleaseButton(int button)
 {
 	FKey key = GetFKeyForButtonID(button);
 	if (key != EKeysCIM::Unknown)
-		FSlateApplication::Get().OnControllerButtonReleased(key, 0, 0);
+	{
+		EmitKeyUpEventForKey(key, 0, 0);
+	}
 }
 
 void FCIMPlugin::SetAxisValue(int axisID, float value)
 {
 	FKey key = GetFKeyForAxisID(axisID);
 	if (key != EKeysCIM::Unknown)
-		FSlateApplication::Get().OnControllerAnalog(key, 0, value);
+	{
+		EmitAnalogInputEventForKey(key, value, 0, 0);
+	}
 }

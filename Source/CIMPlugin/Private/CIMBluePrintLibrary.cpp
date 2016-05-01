@@ -3,7 +3,7 @@
 #include "ICIMPlugin.h"
 
 
-UCIMBluePrintLibrary::UCIMBluePrintLibrary(const FPostConstructInitializeProperties& PCIP)
+UCIMBluePrintLibrary::UCIMBluePrintLibrary(const FObjectInitializer& PCIP)
 : Super(PCIP)
 {
 }

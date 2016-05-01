@@ -8,7 +8,7 @@ namespace UnrealBuildTool.Rules
 	{
         private string ModulePath
         {
-            get { return Path.GetDirectoryName(RulesCompiler.GetModuleFilename(this.GetType().Name)); }
+            get { return ModuleDirectory; }
         }
 
 		public CIMPlugin(TargetInfo Target)
@@ -33,7 +33,8 @@ namespace UnrealBuildTool.Rules
 					"CoreUObject",
                     "Engine",
                     "InputCore",
-                    "Slate"
+                    "Slate",
+                    "SlateCore"
 					// ... add other public dependencies that you statically link with here ...
 				}
 				);
