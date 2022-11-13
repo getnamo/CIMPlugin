@@ -1,8 +1,7 @@
 {
-	"Changelist" : 2946394,
-	"BuildId" : "7e1757f6-5cba-4761-9452-dd075f67ff93",
-	"Modules" : 
+	"BuildId": "17155196",
+	"Modules": 
 	{
-		"CIMPlugin" : "UE4Editor-CIMPlugin.dll"
+		"CIMPlugin": "UE4Editor-CIMPlugin.dll"
 	}
 }

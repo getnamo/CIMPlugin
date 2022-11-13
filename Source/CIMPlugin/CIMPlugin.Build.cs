@@ -11,8 +11,8 @@ namespace UnrealBuildTool.Rules
             get { return ModuleDirectory; }
         }
 
-		public CIMPlugin(TargetInfo Target)
-		{
+		public CIMPlugin(ReadOnlyTargetRules Target) : base(Target)
+        {
 			PublicIncludePaths.AddRange(
 				new string[] {
                     "CIMPlugin/Public",

@@ -1,3 +1,4 @@
+#include "FCIMPlugin.h"
 #include "CIMPluginPrivatePCH.h"
 
 #include "ICIMPlugin.h"
@@ -56,20 +57,20 @@ void FCIMPlugin::StartupModule()
 	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomButton11, LOCTEXT("CustomButton11", "Custom Button 11"), FKeyDetails::GamepadKey));
 	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomButton12, LOCTEXT("CustomButton12", "Custom Button 12"), FKeyDetails::GamepadKey));
 
-	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxis1, LOCTEXT("CustomAxis1", "Custom Axis 1"), FKeyDetails::FloatAxis));
-	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxis2, LOCTEXT("CustomAxis2", "Custom Axis 2"), FKeyDetails::FloatAxis));
-	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxis3, LOCTEXT("CustomAxis3", "Custom Axis 3"), FKeyDetails::FloatAxis));
-	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxis4, LOCTEXT("CustomAxis4", "Custom Axis 4"), FKeyDetails::FloatAxis));
-	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxis5, LOCTEXT("CustomAxis5", "Custom Axis 5"), FKeyDetails::FloatAxis));
-	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxis6, LOCTEXT("CustomAxis6", "Custom Axis 6"), FKeyDetails::FloatAxis));
+	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxis1, LOCTEXT("CustomAxis1", "Custom Axis 1"), FKeyDetails::Axis1D));
+	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxis2, LOCTEXT("CustomAxis2", "Custom Axis 2"), FKeyDetails::Axis1D));
+	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxis3, LOCTEXT("CustomAxis3", "Custom Axis 3"), FKeyDetails::Axis1D));
+	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxis4, LOCTEXT("CustomAxis4", "Custom Axis 4"), FKeyDetails::Axis1D));
+	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxis5, LOCTEXT("CustomAxis5", "Custom Axis 5"), FKeyDetails::Axis1D));
+	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxis6, LOCTEXT("CustomAxis6", "Custom Axis 6"), FKeyDetails::Axis1D));
 
-	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxisX, LOCTEXT("CustomAxisX", "Custom Axis X"), FKeyDetails::FloatAxis));
-	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxisY, LOCTEXT("CustomAxisY", "Custom Axis Y"), FKeyDetails::FloatAxis));
-	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxisZ, LOCTEXT("CustomAxisZ", "Custom Axis Z"), FKeyDetails::FloatAxis));
+	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxisX, LOCTEXT("CustomAxisX", "Custom Axis X"), FKeyDetails::Axis1D));
+	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxisY, LOCTEXT("CustomAxisY", "Custom Axis Y"), FKeyDetails::Axis1D));
+	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxisZ, LOCTEXT("CustomAxisZ", "Custom Axis Z"), FKeyDetails::Axis1D));
 
-	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxisPitch, LOCTEXT("CustomAxisPitch", "Custom Axis Pitch"), FKeyDetails::FloatAxis));
-	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxisYaw, LOCTEXT("CustomAxisYaw", "Custom Axis Yaw"), FKeyDetails::FloatAxis));
-	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxisRoll, LOCTEXT("CustomAxisRoll", "Custom Axis Roll"), FKeyDetails::FloatAxis));
+	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxisPitch, LOCTEXT("CustomAxisPitch", "Custom Axis Pitch"), FKeyDetails::Axis1D));
+	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxisYaw, LOCTEXT("CustomAxisYaw", "Custom Axis Yaw"), FKeyDetails::Axis1D));
+	EKeys::AddKey(FKeyDetails(EKeysCIM::CustomAxisRoll, LOCTEXT("CustomAxisRoll", "Custom Axis Roll"), FKeyDetails::Axis1D));
 }
 
 //UE v4.6 IM event wrappers

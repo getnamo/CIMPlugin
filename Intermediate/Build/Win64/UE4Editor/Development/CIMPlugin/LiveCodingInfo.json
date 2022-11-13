@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CIMPlugin.cpp.obj": [
+			"CIMBluePrintLibrary.cpp.obj",
+			"FCIMPlugin.cpp.obj"
+		],
+		"Module.CIMPlugin.gen.cpp.obj": [
+			"CIMBluePrintLibrary.gen.cpp.obj",
+			"CIMPlugin.init.gen.cpp.obj"
+		]
+	}
+}
