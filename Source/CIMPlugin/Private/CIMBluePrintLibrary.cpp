@@ -1,3 +1,4 @@
+#include "CIMBluePrintLibrary.h"
 #include "CIMPluginPrivatePCH.h"
 #include "CIMBluePrintLibrary.h"
 #include "ICIMPlugin.h"
